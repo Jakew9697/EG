@@ -9,7 +9,7 @@ const HomeCarousel = () => {
       <Carousel.Item className="home-carousel-item" >
         <img
           className="home-carousel-image d-block w-100"
-          src="/assets/enchanted-gardener-images/bloom-flowers-landscape.jpg"
+          src="/assets/eg-images/bloom-flowers-landscape.jpg"
           alt="First slide"
         />
         <Carousel.Caption className="home-carousel-caption carousel-caption-centered">

@@ -100,7 +100,7 @@ const HomeBeforeAfter = () => {
 						onMouseLeave={handleMouseUp}>
 						<div className="before-image-wrapper">
 							<img
-								src="../../../assets/beforeafterimage2.jpg"
+								src="../../../assets/eg-images/beforeafterimage2.jpg"
 								alt="Before"
 								className="before-image"
 							/>
@@ -109,7 +109,7 @@ const HomeBeforeAfter = () => {
 							className="after-image-wrapper"
 							style={{ clipPath: `inset(0 0 0 ${dividerPosition}%)` }}>
 							<img
-								src="../../../assets/bloom-flowers-landscape.jpg"
+								src="../../../assets/eg-images/bloom-flowers-landscape.jpg"
 								alt="After"
 								className="after-image"
 							/>
