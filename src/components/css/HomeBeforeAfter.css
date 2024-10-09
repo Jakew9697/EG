@@ -1,0 +1,174 @@
+/* HomeBeforeAfter.css */
+
+/* Stack Column (Header and Paragraph) */
+.home-before-after-stack{
+	background:rgba(255, 255, 255, 0.574) !important;
+	border-radius: 20px;
+}
+
+.before-after-header-div {
+	color: #774304;
+	font-family: Palatino Linotype, serif;
+	display: inline-table;
+	text-align: center;
+	user-select: none;
+}
+
+.before-after-header{
+	font-size: 2.75rem;
+}
+
+.before-after-paragraph {
+	color: #774304;
+	font-family: Palatino Linotype, serif;
+	font-size: 1.5rem;
+	display: inline-table;
+	text-align: center;
+	user-select: none;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.before-after-labels{
+	font-size: 2rem;
+	font-weight: bold;
+	font-family: Palatino Linotype, serif;
+	color: #774304;
+}
+
+/* Before/After Image Container */
+.before-after-container {
+	position: relative;
+	width: 100%;
+	height: 600px;
+	border-radius: 10px;
+	overflow: hidden;
+	user-select: none;
+	box-shadow: 0 0 20px rgba(64, 64, 64, 0.45);
+}
+
+.before-image-wrapper,
+.after-image-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	user-select: none;
+}
+
+.before-image,
+.after-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	user-select: none;
+}
+
+.after-image-wrapper {
+	overflow: hidden;
+	height: 100%;
+}
+
+.divider {
+	position: absolute;
+	top: 0;
+	width: 20px;
+	height: 100%;
+	background: #f7f0e4;
+	border-radius: 10px;
+	cursor: ew-resize;
+	z-index: 2;
+	user-select: none;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.divider::before {
+	content: "";
+	display: block;
+	width: 40%;
+	height: 7%;
+	background-color: rgba(0, 0, 0, 0.375);
+	border-radius: 4px;
+}
+
+/* Hide the mobile container on desktop */
+.before-after-container-mobile {
+	display: none;
+}
+
+/* Media Queries */
+
+/* Mobile and tablet layout (up to 1024px) */
+@media (max-width: 1024px) {
+	/* Hide desktop layout */
+	.before-after-container-desktop {
+		display: none;
+	}
+
+	/* Show mobile layout */
+	.before-after-container-mobile {
+		display: block;
+	}
+
+	.before-after-header {
+		font-size: 2rem;
+	}
+
+	.before-after-paragraph-column.mb-5 {
+		margin-bottom: 1rem !important;
+	}
+
+	.before-after-paragraph {
+		font-size: 1.25rem;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	.before-after-labels{
+		display: none !important;
+	}
+
+	.before-image-wrapper-mobile,
+	.after-image-wrapper-mobile {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.before-image-wrapper-mobile img,
+	.after-image-wrapper-mobile img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
+}
+
+/* For mobile phones and tablets (576px and below) */
+@media (max-width: 576px) {
+	.home-before-after-stack.row{
+		margin-top: 20px !important;
+	}
+
+	.before-image-wrapper-mobile,
+	.after-image-wrapper-mobile {
+		margin-bottom: 15px;
+	}
+
+	.before-after-header {
+		font-size: 1.5rem;
+	}
+
+	.before-after-paragraph-column.mb-5 {
+		margin-bottom: 1rem !important;
+	}
+
+	.before-after-paragraph {
+		font-size: 1rem;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}

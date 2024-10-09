@@ -1,0 +1,27 @@
+.home-container {
+  position: relative;
+  background-color: #e5dbc997; /* Background color */
+  --bs-gutter-x: 0 !important;
+}
+
+/* Add a pseudo-element for the background image */
+.home-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../public/assets/home-page-background-image.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat; /* Or 'no-repeat' if you don't want it to repeat */
+  opacity: 0.8; /* Adjust the opacity to make it less bold */
+  z-index: -1; /* Send it behind the content */
+}
+
+/* Ensure the content within the container is layered on top */
+.home-container > * {
+  position: relative;
+  z-index: 1;
+}

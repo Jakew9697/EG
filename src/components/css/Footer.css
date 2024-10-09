@@ -1,0 +1,39 @@
+.footer {
+    background-color: #f7b9ce;
+}
+
+.footer-nav .nav-link {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.footer-nav .nav-link:hover {
+    text-decoration: underline;
+    color: #f7b9ce;
+}
+
+.vertical-line {
+    height: 160px;
+    width: 1px;
+    background-color: #f7f0e4;
+}
+
+.navbar-text {
+    font-size: 0.9rem;
+    color: #f7f0e4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .vertical-line {
+        display: none;
+    }
+    .footer-nav {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    .navbar-text {
+        text-align: center;
+        width: 100%;
+    }
+}
