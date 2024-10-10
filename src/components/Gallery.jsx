@@ -1,58 +1,140 @@
 import React from "react";
 import HeroBanner from "../components/HeroBanner";
-import {Container, Row, Col, Card, Button} from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
+import "./css/Gallery.css";
 
 export default function Gallery() {
-  return (
-    <>
-      <HeroBanner
-        title="Our Gallery"
-        subtitle="Explore our beautiful landscaping projects and transformations."
-        backgroundImage="path/to/gallery-background.jpg"
-      />
-      <Container fluid>
-        <Row className="gallery-row mt-4">
-          <Col className="mb-5">
-            <Card className="gallery-card">
-              <Row className="g-0">
-                {/* Column for the image on the left */}
-                <Col md={8} className="pe-2">
-                  <Card.Img
-                    src="https://via.placeholder.com/150"
-                    className="gallery-card-img"
-                  />
-                </Col>
-                {/* Column for the card content on the right */}
-                <Col md={4} className="gallery-body-column ps-2">
-                  <Card.Body className="d-flex flex-column justify-content-between">
-                    <div>
-                      <Card.Title className="gallery-card-title">
-                        Beautiful Garden Transformation
-                      </Card.Title>
-                      <hr />
-                      <Card.Text className="gallery-card-text">
-                        Our team transformed this overgrown backyard into a
-                        beautiful garden oasis. We installed new plants, a
-                        custom-designed patio, and a water feature to create a
-                        peaceful retreat for the homeowners. Explore the gallery
-                        to see more of our stunning transformations.
-                      </Card.Text>
-                    </div>
-                    {/* Using align-items-end for button placement */}
-                    <Container
-                      fluid
-                      className="gallery-button d-flex align-items-end justify-content-start px-0">
-                      <Button className="gallery-button" variant="primary" size="lg">
-                        View Gallery
-                      </Button>
-                    </Container>
-                  </Card.Body>
-                </Col>
-              </Row>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    </>
-  );
+	return (
+		<>
+			<HeroBanner
+				title="Our Gallery"
+				subtitle="Explore our beautiful landscaping projects and transformations."
+				backgroundImage="/assets/eg-images/yard-bench-eg-og.jpg"
+				className="gallery-hero-banner"
+			/>
+			<Container fluid className="gallery-container px-5">
+				{/* First Row of Images */}
+				<Row className="gallery-row">
+					<Col md={5} className="my-3">
+						<Image
+							src="/assets/more-eg-photos/fresh-landscape-backyard.jpg"
+							alt="Gallery Image"
+							className="gallery-image"
+						/>
+					</Col>
+					<Col md={3} className="my-3">
+						<Image
+							src="/assets/more-eg-photos/stone-path.jpg"
+							alt="Gallery Image"
+							className="gallery-image"
+						/>
+					</Col>
+					<Col md={4} className="my-3">
+						<Image
+							src="/assets/eg-images/Final ex1.jpg"
+							alt="Gallery Image"
+							className="gallery-image"
+						/>
+					</Col>
+				</Row>
+				{/* Second Row of Images */}
+				<Row>
+					<Col md={3} className="my-3">
+						<Image
+							src="/assets/more-eg-photos/front-door2.jpg"
+							alt="Gallery Image"
+							className="gallery-image"
+						/>
+					</Col>
+					<Col md={7} className="my-3">
+						<Image
+							src="/assets/more-eg-photos/after-backyard.jpg"
+							alt="Gallery Image"
+							className="gallery-image"
+						/>
+					</Col>
+					<Col md={2} className="my-3">
+						<Image
+							src="/assets/more-eg-photos/pot-on-stone.jpg"
+							alt="Gallery Image"
+							className="gallery-image"
+						/>
+					</Col>
+				</Row>
+
+				{/* Third Row of Images */}
+				<Row className="gallery-row">
+					<Col md={4} className="my-3">
+						<Image
+							src="/assets/more-eg-photos/curved-wall-plants.jpg"
+							alt="Gallery Image"
+							className="gallery-image"
+						/>
+					</Col>
+					<Col md={4} className="my-3">
+						<Image
+							src="/assets/more-eg-photos/fresh-landscape-backyard2.jpg"
+							alt="Gallery Image"
+							className="gallery-image"
+						/>
+					</Col>
+					<Col md={4} className="my-3">
+						<Image
+							src="/assets/more-eg-photos/stone-wall-plants.jpg"
+							alt="Gallery Image"
+							className="gallery-image"
+						/>
+					</Col>
+				</Row>
+				{/* 4th row */}
+				<Row className="gallery-row">
+					<Col md={5} className="my-3">
+						<Image
+							src="/assets/more-eg-photos/indoor-planter.jpg"
+							alt="Gallery Image"
+							className="gallery-image"
+						/>
+					</Col>
+					<Col md={3} className="my-3">
+						<Image
+							src="/assets/more-eg-photos/patio.jpg"
+							alt="Gallery Image"
+							className="gallery-image"
+						/>
+					</Col>
+					<Col md={4} className="my-3">
+						<Image
+							src="/assets/more-eg-photos/float-pot.jpg"
+							alt="Gallery Image"
+							className="gallery-image"
+						/>
+					</Col>
+				</Row>
+				{/* 5th row */}
+				<Row className="gallery-row">
+					<Col md={3} className="my-3">
+						<Image
+							src="/assets/more-eg-photos/skinny-tall-plant.jpg"
+							alt="Gallery Image"
+							className="gallery-image"
+						/>
+					</Col>
+					<Col md={4} className="my-3">
+						<Image
+							src="/assets/more-eg-photos/brick-path.jpg"
+							alt="Gallery Image"
+							className="gallery-image"
+						/>
+					</Col>
+					<Col md={5} className="my-3">
+						<Image
+							src="/assets/more-eg-photos/front-door3.jpg"
+							alt="Gallery Image"
+							className="gallery-image"
+						/>
+					</Col>
+				</Row>
+			</Container>
+		</>
+	);
 }

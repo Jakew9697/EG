@@ -18,7 +18,7 @@ const HomeBeforeAfter = () => {
 		const rect = containerRef.current.getBoundingClientRect();
 		const offsetX = e.clientX - rect.left;
 
-		const dividerWidth = 20; // The width of the divider in pixels
+		const dividerWidth = 20;
 		const newDividerPosition = Math.min(
 			Math.max(((offsetX - dividerWidth / 2) / rect.width) * 100, 0),
 			100
@@ -100,7 +100,7 @@ const HomeBeforeAfter = () => {
 						onMouseLeave={handleMouseUp}>
 						<div className="before-image-wrapper">
 							<img
-								src="../../../assets/eg-images/beforeafterimage2.jpg"
+								src="../../../assets/eg-images/Before H1 back corner.Final.jpg"
 								alt="Before"
 								className="before-image"
 							/>
@@ -109,7 +109,7 @@ const HomeBeforeAfter = () => {
 							className="after-image-wrapper"
 							style={{ clipPath: `inset(0 0 0 ${dividerPosition}%)` }}>
 							<img
-								src="../../../assets/eg-images/bloom-flowers-landscape.jpg"
+								src="../../../assets/eg-images/After H1 back corner.Final.jpg"
 								alt="After"
 								className="after-image"
 							/>

@@ -12,7 +12,7 @@ export default function HomeServing() {
 							{/* Column for the image on the left */}
 							<Col md={8} className="pe-2">
 								<Card.Img
-									src="https://via.placeholder.com/150"
+									src="../../../assets/eg-images/cropped.jpg"
 									className="home-serving-card-img"
 								/>
 							</Col>
