@@ -1,6 +1,6 @@
 import React from "react";
 import HeroBanner from "../components/HeroBanner";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Accordion, Card } from "react-bootstrap";
 import "./css/Services.css";
 
 export default function Services() {
@@ -12,51 +12,132 @@ export default function Services() {
 				backgroundImage="/assets/eg-images/flower-shovel.jpg"
 				className="services-hero-banner"
 			/>
-			<Container fluid>
-				<Row className="services-row mt-4">
-					<Col className="mb-5">
+			<Container fluid className="services-container">
+				<Row className="services-header-row my-5">
+					<Col md={12} className="d-flex justify-content-center">
+						<h2>Serving West Michigan for Over 15 Years</h2>
+					</Col>
+				</Row>
+				<Row className="services-card-row my-5">
+					<Col md={4} className="mb-5">
 						<Card className="services-card">
-							<Row className="g-0">
-								{/* Column for the image on the left */}
-								<Col md={8} className="pe-2">
-									<Card.Img
-										src="/assets/eg-images/cropped.jpg"
-										className="services-card-img"
-									/>
-								</Col>
-								{/* Column for the card content on the right */}
-								<Col md={4} className="services-body-column ps-2">
-									<Card.Body className="d-flex flex-column justify-content-between">
-										<div>
-											<Card.Title className="services-card-title">
-												Expert Gardening and Landscaping Services
-											</Card.Title>
-											<hr />
-											<Card.Text className="services-card-text">
-												Enchanted Gardener offers a wide range of expert
-												gardening, maintenance, hardscaping, design, and
-												installation services. Whether you need weekly care like
-												weeding or a complete landscape transformation, our
-												dedicated team is here to bring your outdoor vision to
-												life. With over 14 years of experience, we proudly serve
-												the community, turning ordinary spaces into
-												extraordinary landscapes.
-											</Card.Text>
-										</div>
-										{/* Using align-items-end for button placement */}
-										<Container
-											fluid
-											className="services-button d-flex align-items-end justify-content-start px-0">
-											<Button
-												className="services-button"
-												variant="primary"
-												size="lg">
-												View Services
-											</Button>
-										</Container>
-									</Card.Body>
-								</Col>
-							</Row>
+							<Card.Img
+								variant="top"
+								src="/assets/eg-images/pool-garden.jpg"
+								alt="Garden"
+							/>
+							<Card.Body>
+								<Card.Title className="d-flex justify-content-center">
+									Gardening
+								</Card.Title>
+								<Card.Text>
+									Our gardening services include planting, weeding, pruning, and
+									mulching. We can help you design and maintain a beautiful
+									garden that will thrive in West Michigan's unique climate.
+								</Card.Text>
+							</Card.Body>
+						</Card>
+					</Col>
+					<Col md={4} className="mb-5">
+						<Card className="services-card">
+							<Card.Img
+								variant="top"
+								src="/assets/more-eg-photos/old-truck.jpg"
+								alt="Maintenance"
+							/>
+							<Card.Body>
+								<Card.Title className="d-flex justify-content-center">
+									Maintenance
+								</Card.Title>
+								<Card.Text>
+									We offer maintenance services to keep your garden looking its
+									best. Our team can provide regular maintenance, such as
+									mowing, trimming, and fertilizing, to ensure your garden stays
+									healthy and vibrant.
+								</Card.Text>
+							</Card.Body>
+						</Card>
+					</Col>
+					<Col md={4} className="mb-5">
+						<Card className="services-card">
+							<Card.Img
+								variant="top"
+								src="/assets/eg-images/backyard-eg-og.jpg"
+								alt="Landscaping"
+							/>
+							<Card.Body>
+								<Card.Title className="d-flex justify-content-center">
+									Landscapes
+								</Card.Title>
+								<Card.Text>
+									Our landscaping services include design, installation, and
+									maintenance. Whether you're looking to create a new outdoor
+									living space or update your existing landscape, we can help
+									you bring your vision to life.
+								</Card.Text>
+							</Card.Body>
+						</Card>
+					</Col>
+
+					<Col md={4} className="mb-5">
+						<Card className="services-card">
+							<Card.Img
+								variant="top"
+								src="/assets/eg-images/hardscaping-1.jpg"
+								alt="Hardscaping"
+							/>
+							<Card.Body>
+								<Card.Title className="d-flex justify-content-center">
+									Hardscapes
+								</Card.Title>
+								<Card.Text>
+									We offer h ardscaping services to enhance your outdoor space.
+									From patios and walkways to retaining walls and fire pits, we
+									can help you create a beautiful and functional outdoor living
+									area.
+								</Card.Text>
+							</Card.Body>
+						</Card>
+					</Col>
+					<Col md={4} className="mb-5">
+						<Card className="services-card">
+							<Card.Img
+								variant="top"
+								src="/assets/eg-images/seasonal-cleanup-1.jpg"
+								alt="Seasonal Cleanup"
+							/>
+							<Card.Body>
+								<Card.Title className="d-flex justify-content-center">
+									Seasonal Services
+								</Card.Title>
+								<Card.Text>
+									We provide seasonal cleanup services to prepare your garden
+									for the changing seasons. Our team can help you clean up
+									debris, trim plants, and prepare your garden for winter or
+									spring.
+								</Card.Text>
+							</Card.Body>
+						</Card>
+					</Col>
+					<Col md={4} className="mb-5">
+						<Card className="services-card">
+							<Card.Img
+								variant="top"
+								src="/assets/eg-images/consultation-1.jpg"
+								alt="Consultation"
+							/>
+							<Card.Body>
+								<Card.Title className="d-flex justify-content-center">
+									Chemical Applications
+								</Card.Title>
+								<Card.Text>
+									Our certified staff can help with everything from pesky weeds
+									to any unwanted organic matter that needs special care taken
+									to remove. Let our pros step in and get the job done right.
+									Licensed and knowledgeable, our staff can guide you in a
+									step-by-step process to control the unwanted organic matter.
+								</Card.Text>
+							</Card.Body>
 						</Card>
 					</Col>
 				</Row>
