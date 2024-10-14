@@ -1,4 +1,76 @@
-/* CSS specific to the Services page hero banner */
 .services-hero-banner {
-    background-position: 30% 20%; /* Adjust as needed to reposition the image */
-  }
+	background-position: 30% 20%;
+}
+
+.services-container {
+	position: relative;
+	background-color: #e5dbc997; /* Background color */
+}
+
+.services-container::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("../../../public/assets/home-page-background-image.webp");
+	background-size: cover;
+	background-position: center;
+	background-repeat: repeat; /* Or 'no-repeat' if you don't want it to repeat */
+	opacity: 0.8; /* Adjust the opacity to make it less bold */
+	z-index: -1; /* Send it behind the content */
+}
+
+.services-body-header{
+  font-family: Palatino Linotype, serif;
+  color: #774304;
+  text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.2);
+}
+
+.services-card {
+	background: #f7f0e4;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  font-family: Palatino Linotype, serif;
+}
+
+.card-title-txt{
+  color: #774304;
+}
+
+.card-pg-text{
+  color: #774304;
+  font-size: large;
+  text-align: center;
+}
+
+.srv-contact-btn {
+	color: #f7b9ce;
+	background-color: #774304;
+	border-color: #774304;
+	font-weight: bold;
+	font-family: Palatino Linotype, serif;
+	transition: all 0.3s ease-in-out;
+	padding: 0.5rem 1rem;
+	width: 100%;
+}
+
+.srv-contact-btn:hover {
+	color: #f7b9ce;
+	background-color: #774304;
+	border-color: #774304;
+	transform: scale(1.1);
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.srv-contact-btn:active, .srv-contact-btn:focus {
+  background: #774304;
+}
+
+.services-card-img {
+	width: 100%;
+	height: 350px;
+	object-fit: fill;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}

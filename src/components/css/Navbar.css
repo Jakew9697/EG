@@ -5,7 +5,7 @@
 	/* background-position: center; */
 	/* background-repeat: repeat; Or 'no-repeat' if you don't want it to repeat */
 	/* background-attachment: scroll !important; Ensures the background scrolls */
-	background-color: #f7f0e4;
+	background: linear-gradient(90deg, #f7f0e4, #f7b9ce97);
 	padding: 0.25rem 6rem;
 	transition: padding 0.3s;
 }

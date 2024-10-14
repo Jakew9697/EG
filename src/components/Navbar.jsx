@@ -69,7 +69,7 @@ export default function Navigation() {
                 className="nav-quote"
                 onClick={handleShowQuote} // Trigger the Offcanvas display
               >
-                Request a Quote
+                Contact Us
               </Button>
             </Nav>
           </div>
