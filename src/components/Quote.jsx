@@ -31,6 +31,7 @@ export default function Quote({ show, handleClose }) {
     { value: "maintenance", label: "Maintenance" },
     { value: "chemicalapplication", label: "Chemical Application" },
     { value: "seasonalservice", label: "Seasonal Service" },
+    { value: "notlisted", label: "Not Listed" },
   ];
 
   const animatedComponents = makeAnimated();
@@ -51,6 +52,13 @@ export default function Quote({ show, handleClose }) {
   // Handle select change for services
   const handleSelectChange = (selected) => {
     setFormData({ ...formData, services: selected });
+
+    // Clear the error if the user selects one or more services
+    if (errors.services) {
+      const newErrors = { ...errors };
+      delete newErrors.services;
+      setErrors(newErrors);
+    }
   };
 
   // Validate form fields
@@ -67,6 +75,9 @@ export default function Quote({ show, handleClose }) {
     if (!formData.phoneNumber.trim())
       newErrors.phoneNumber = "Phone Number is required";
     if (!formData.message.trim()) newErrors.message = "Message is required";
+    if (formData.services.length === 0)
+      newErrors.services = "Selecting one or more options is required";
+
     return newErrors;
   };
 
@@ -153,6 +164,28 @@ export default function Quote({ show, handleClose }) {
           </Row>
           <Row>
             <Col>
+              <Form.Group controlId="formServiceSelection" className="mb-3">
+                <Form.Label>Service Request Selection</Form.Label>
+                <Select
+                  options={serviceOptions}
+                  isMulti
+                  components={animatedComponents}
+                  value={formData.services}
+                  onChange={handleSelectChange}
+                  placeholder="Select one or more services..."
+                  className={`react-select-container ${
+                    errors.services ? "is-invalid" : ""
+                  }`}
+                  classNamePrefix="react-select"
+                />
+                {errors.services && (
+                  <div className="text-danger">{errors.services}</div>
+                )}
+              </Form.Group>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
               <Form.Group controlId="formAddress" className="mb-3">
                 <Form.Label>Address</Form.Label>
                 <Form.Control
@@ -215,30 +248,13 @@ export default function Quote({ show, handleClose }) {
               </Form.Group>
             </Col>
           </Row>
-          <Row>
-            <Col>
-              <Form.Group controlId="formServiceSelection" className="mb-3">
-                <Form.Label>Service Request Selection</Form.Label>
-                <Select
-                  options={serviceOptions}
-                  isMulti
-                  components={animatedComponents}
-                  value={formData.services}
-                  onChange={handleSelectChange}
-                  placeholder="Select one or more services..."
-                  className="react-select-container"
-                  classNamePrefix="react-select"
-                />
-              </Form.Group>
-            </Col>
-          </Row>
           <Form.Group controlId="formMessage" className="mb-4">
             <Form.Label>Additional Notes</Form.Label>
             <Form.Control
               as="textarea"
               rows={3}
               name="message"
-              placeholder="Write any additional details you'd like to add here... add character limitations"
+              placeholder="Write your message here..."
               className="modern-input"
               value={formData.message}
               onChange={handleChange}
