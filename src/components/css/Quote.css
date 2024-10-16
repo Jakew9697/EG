@@ -1,103 +1,111 @@
 .modern-offcanvas {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    min-width: 40%;
-    background-color: #f7f0e4;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s ease-in-out;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  min-width: 40%;
+  background-color: #f7f0e4;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Title Styling */
+.offcanvas-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333; /* Dark text color for clarity */
+  margin-bottom: 0.5rem;
+}
+
+/* Input styling */
+.modern-input {
+  border-radius: 8px;
+  border: 1px solid #ccc; /* Softer border for input fields */
+  padding: 0.75rem;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.modern-input:focus {
+  border-color: #5cb85c; /* Green border on focus */
+  box-shadow: 0 0 5px rgba(92, 184, 92, 0.5); /* Green shadow on focus */
+}
+
+/* Button styling */
+.modern-button {
+  background-color: #5cb85c; /* Green button for a modern look */
+  border: none;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.modern-button:hover {
+  background-color: #4cae4c; /* Darker green on hover */
+  transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+.modern-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 174, 76, 0.5); /* Green shadow on focus */
+}
+
+.react-select__control {
+  border-radius: 8px;
+  border-color: #ccc;
+}
+
+.react-select__option--is-selected {
+  background-color: #5cb85c;
+  color: white;
+}
+
+.alert-success {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.invalid-feedback {
+  font-size: 0.875rem;
+}
+
+/* Responsive enhancements */
+@media (max-width: 991px) {
+  .modern-offcanvas {
+    width: 100%; /* Full width on smaller screens */
   }
 
-  
-  /* Title Styling */
   .offcanvas-title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #333; /* Dark text color for clarity */
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
   }
-  
-  /* Input styling */
+
   .modern-input {
-    border-radius: 8px;
-    border: 1px solid #ccc; /* Softer border for input fields */
-    padding: 0.75rem;
-    font-size: 1rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    padding: 0.5rem;
+    font-size: 0.9rem;
   }
-  
-  .modern-input:focus {
-    border-color: #5cb85c; /* Green border on focus */
-    box-shadow: 0 0 5px rgba(92, 184, 92, 0.5); /* Green shadow on focus */
-  }
-  
-  /* Button styling */
+
   .modern-button {
-    background-color: #5cb85c; /* Green button for a modern look */
-    border: none;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    font-size: 1.2rem;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
   }
-  
-  .modern-button:hover {
-    background-color: #4cae4c; /* Darker green on hover */
-    transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+@media (max-width: 768px) {
+  .modern-offcanvas {
+    min-width: 100%; /* Full width on smaller screens */
   }
-  
-  .modern-button:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(76, 174, 76, 0.5); /* Green shadow on focus */
+
+  .offcanvas-title {
+    font-size: 1.5rem;
   }
-  
-  .alert-success {
-    margin-bottom: 1rem;
-    border-radius: 8px;
+
+  .modern-input {
+    padding: 0.5rem;
+    font-size: 0.9rem;
   }
-  
-  .invalid-feedback {
-    font-size: 0.875rem;
+
+  .modern-button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
   }
-  
-  /* Responsive enhancements */
-  @media (max-width: 991px) {
-    .modern-offcanvas {
-      width: 100%; /* Full width on smaller screens */
-    }
-  
-    .offcanvas-title {
-      font-size: 1.5rem;
-    }
-  
-    .modern-input {
-      padding: 0.5rem;
-      font-size: 0.9rem;
-    }
-  
-    .modern-button {
-      font-size: 1rem;
-      padding: 0.5rem 1rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .modern-offcanvas {
-      min-width: 100%; /* Full width on smaller screens */
-    }
-  
-    .offcanvas-title {
-      font-size: 1.5rem;
-    }
-  
-    .modern-input {
-      padding: 0.5rem;
-      font-size: 0.9rem;
-    }
-  
-    .modern-button {
-      font-size: 1rem;
-      padding: 0.5rem 1rem;
-    }
-  }
-  
+}
