@@ -7,7 +7,7 @@
 /* Add a pseudo-element for the background image */
 .home-container::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

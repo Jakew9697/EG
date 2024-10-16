@@ -9,7 +9,7 @@
 
 .services-container::before {
 	content: "";
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -22,26 +22,27 @@
 	z-index: -1; /* Send it behind the content */
 }
 
-.services-body-header{
-  font-family: Palatino Linotype, serif;
-  color: #774304;
-  text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.2);
+.services-body-header {
+	font-family: Palatino Linotype, serif;
+	color: #774304;
+	text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.2);
 }
 
 .services-card {
 	background: #f7f0e4;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-  font-family: Palatino Linotype, serif;
+	font-family: Palatino Linotype, serif;
+	border-radius: 15px;
 }
 
-.card-title-txt{
-  color: #774304;
+.card-title-txt {
+	color: #774304;
 }
 
-.card-pg-text{
-  color: #774304;
-  font-size: large;
-  text-align: center;
+.card-pg-text {
+	color: #774304;
+	font-size: large;
+	text-align: center;
 }
 
 .srv-contact-btn {
@@ -63,8 +64,9 @@
 	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
-.srv-contact-btn:active, .srv-contact-btn:focus {
-  background: #774304;
+.srv-contact-btn:active,
+.srv-contact-btn:focus {
+	background: #774304;
 }
 
 .services-card-img {

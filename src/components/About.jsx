@@ -1,62 +1,122 @@
 import React from "react";
 import HeroBanner from "../components/HeroBanner";
-import {Container, Row, Col, Card, Button} from "react-bootstrap";
+import TestimonialCarousel from "../components/TestimonialCarousel";
+import { Container, Row, Col, Carousel, Button } from "react-bootstrap";
+import "./css/About.css";
 
 export default function About() {
-  return (
-    <>
-      <HeroBanner
-        title="About Us"
-        subtitle="Learn more about our passion for creating beautiful outdoor spaces."
-        backgroundImage="path/to/about-background.jpg"
-      />
-      <Container fluid>
-        <Row className="about-row mt-4">
-          <Col className="mb-5">
-            <Card className="about-card">
-              <Row className="g-0">
-                {/* Column for the image on the left */}
-                <Col md={8} className="pe-2">
-                  <Card.Img
-                    src="https://via.placeholder.com/150"
-                    className="about-card-img"
-                  />
-                </Col>
-                {/* Column for the card content on the right */}
-                <Col md={4} className="about-body-column ps-2">
-                  <Card.Body className="d-flex flex-column justify-content-between">
-                    <div>
-                      <Card.Title className="about-card-title">
-                        Serving West Michigan for 14 years.
-                      </Card.Title>
-                      <hr />
-                      <Card.Text className="about-card-text">
-                        Enchanted Gardener began as a passionate hobby and has
-                        since blossomed into a full-service landscaping company,
-                        offering expert gardening, maintenance, hardscaping,
-                        design, and installation services. Whether you need weekly
-                        care like weeding or a complete landscape transformation,
-                        our dedicated team is here to bring your outdoor vision to
-                        life. With over 14 years of experience, we proudly serve
-                        the community, turning ordinary spaces into extraordinary
-                        landscapes.
-                      </Card.Text>
-                    </div>
-                    {/* Using align-items-end for button placement */}
-                    <Container
-                      fluid
-                      className="about-button d-flex align-items-end justify-content-start px-0">
-                      <Button className="about-button" variant="primary" size="lg">
-                        About Us
-                      </Button>
-                    </Container>
-                  </Card.Body>
-                </Col>
-              </Row>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    </>
-  );
+	// Sample testimonials data
+	const testimonials = [
+		{
+			title: "Testimonials",
+			text: "They've been servicing our garden for a few years now and we have been pleased with their professionalism and quality of work. They have also made nice suggestions that made our place look great! I would recommend Enchanted gardeners.",
+			author: "- Rich Mason",
+		},
+		{
+			title: "Testimonials",
+			text: "Enchanted Gardener is....what can I say...enchanting! They take wonderful ideas and make them happen! They take the time to help you understand how to care for your planters and keep them beautiful. Can't wait for their fall ideas.",
+			author: "- Suzy Cox",
+		},
+		{
+			title: "Testimonials",
+			text: "Scheduling was a breeze and the service was impeccable. Professional, prompt and neat - my yard looks amazing. I will use them again.",
+			author: "- Nicole H",
+		},
+		{
+			title: "Testimonials",
+			text: "Such beautiful work and friendly gardeners! Enchanted Gardener took my patio planters from blah to WOW!!!",
+			author: "- Martha Munch",
+		},
+		{
+			title: "Testimonials",
+			text: "We could not be happier with the landscape job these guys & gals did!! Dave, Portia & the entire team have been wonderful to work with. During the design process Portia really delivered a better than expected, low maintenance but not generic landscape layout. I’m so in love with a yard I once despised! 💜",
+			author: "- Kelly Dugan",
+		},
+		{
+			title: "Testimonials",
+			text: "Friendly service and the mulch/landscaping turned out great. Thanks!",
+			author: "- Ben Massie",
+		},
+	];
+
+	return (
+		<>
+			<HeroBanner
+				title="About Us"
+				subtitle="Our passion for creating beautiful outdoor spaces."
+				backgroundImage="/assets/eg-images/flower-chair-eg-og.jpg"
+				className="about-hero-banner"
+			/>
+			<Container fluid className="about-container">
+				<Row className="about-intro-section align-items-center px-3 rounded shadow">
+					<Col md={6} className="text-center py-4">
+						<Carousel
+							controls={false}
+							indicators={false}
+							className="about-carousel"
+							fade
+						>
+							<Carousel.Item>
+								<img
+									src="/assets/more-eg-photos/after-backyard.jpg"
+									alt="After"
+									className="d-block w-100 rounded about-image"
+								/>
+							</Carousel.Item>
+							<Carousel.Item>
+								<img
+									src="/assets/more-eg-photos/before-backyard.jpg"
+									alt="Before"
+									className="d-block w-100 rounded about-image"
+								/>
+							</Carousel.Item>
+						</Carousel>
+					</Col>
+					<Col md={6} className="d-flex flex-column justify-content-center">
+						<h2 className="about-heading d-flex justify-content-center">
+							Transforming Spaces for 14 Years
+						</h2>
+						<p className="about-text mt-4">
+							What began as a hobby has grown into a small business dedicated to
+							providing personalized landscaping services in the Greater Grand
+							Rapids Area for over 14 years. We focus on each client's
+							individual needs to better serve them. We offer everything from
+							landscape design and installation, to regular maintenance,
+							seasonal containers, and chemical application. Our staff continue
+							to grow with the green industry, staying on top of the latest
+							trends to ensure our clients receive the best care for their
+							cherished outdoor spaces. We know how important your gardens can
+							be. They serve as a tranquil getaway or the space in which
+							everyone gathers. We are dedicated to helping you create and
+							maintain a unique space to call your own.
+						</p>
+						<Button className="mt-3 modern-button" variant="primary">
+							Learn More
+						</Button>
+					</Col>
+				</Row>
+
+				{/* Second Section - Our Mission */}
+				<Row className="about-mission-section py-5 text-center text-light">
+					<Col>
+						<div className="overlay">
+							<h3 className="about-mission-title">Our Mission</h3>
+							<p className="about-mission-text">
+								To create stunning outdoor spaces that inspire and delight. We
+								aim to blend nature's beauty with thoughtful design, offering
+								our clients spaces that feel both functional and serene.
+							</p>
+						</div>
+					</Col>
+				</Row>
+
+				{/* Third Section - Testimonials Carousel */}
+				<Row className="about-testimonials-section py-5">
+					<Col md={8} className="mx-auto">
+						<TestimonialCarousel testimonials={testimonials} />
+					</Col>
+				</Row>
+			</Container>
+		</>
+	);
 }

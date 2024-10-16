@@ -58,9 +58,9 @@ const HomeBeforeAfter = () => {
 	return (
 		<>
 			{/* Row for the Stack (Header and Paragraph) */}
-			<Row className="mt-5 mx-1 justify-content-start home-before-after-stack">
-				<Col xs={12} className="before-after-paragraph-column d-flex justify-content-center mb-5">
-					<Stack gap={3} className="home-before-after-stack justify-content-center text-center pt-5">
+			<Row className="mt-5 mx-1 justify-content-start home-before-after-stack px-5 mx-5">
+				<Col className="before-after-paragraph-column d-flex justify-content-center mx-2 mb-5">
+					<Stack gap={1} className="home-before-after-stack justify-content-center text-center py-5">
 						<div className="before-after-header-div">
 							<h1 className="before-after-header">
 								<b>Breathtaking outdoor spaces designed specifically for your home.</b>
@@ -82,11 +82,11 @@ const HomeBeforeAfter = () => {
 			<Row className="mx-1 justify-content-center home-before-after-images">
 				{/* Desktop view - overlapping images with a divider */}
 				<Row className="before-after-labels">
-					<Col md={6} className="before-label d-flex justify-content-center">
-					<p>Before</p>
+					<Col md={6} className="d-flex justify-content-center">
+					<p className="before-label p-2">Before</p>
 					</Col>
-					<Col md={6} className="after-label d-flex justify-content-center">
-					<p>After</p>
+					<Col md={6} className="d-flex justify-content-center">
+					<p className="after-label p-2">After</p>
 					</Col>
 				</Row>
 				<Col xs={12} md={8} lg={8} className="mb-5 w-100 before-after-container-desktop">
