@@ -1,6 +1,6 @@
 .testimonial-card {
-    max-width: 800px;
-    border-radius: 15px;
+    max-width: auto;
+    font-family: Palatino Linotype, serif;
     border: none;
     background: #f7f0e4;
 }
@@ -16,17 +16,14 @@
 }
 
 .testimonial-title {
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 1rem;
-    color: #333;
+    color: #774304;
 }
 
 .testimonial-text {
-    font-size: 1.1rem;
-    font-style: italic;
-    margin-bottom: 1rem;
-    color: #555;
+    font-size: 1.4rem;
+    color: #774304;
 }
 
 .testimonial-author {

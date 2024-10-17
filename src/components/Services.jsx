@@ -71,7 +71,7 @@ export default function Services() {
 	return (
 		<>
 			<HeroBanner
-				title="Our Services"
+				title="Services"
 				subtitle="Expert gardening, maintenance, and landscaping solutions for all your needs."
 				backgroundImage="/assets/eg-images/flower-shovel.jpg"
 				className="services-hero-banner"

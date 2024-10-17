@@ -34,59 +34,24 @@
 	font-size: 2.5rem;
 	font-weight: bold;
 	color: #774304;
+	font-family: Palatino Linotype, serif;
 }
 
 .about-text {
-	font-size: 1.1rem;
+	font-size: 1.3rem;
 	color: #774304;
+	font-family: Palatino Linotype, serif;
 }
 
 .about-carousel {
 	width: 100%;
 	max-height: auto;
 }
-
-.about-image {
-	border-radius: 15px;
-}
-
-.about-mission-section {
-	/* background-image: url("/path/to/mission-background.jpg"); */
-	background-size: cover;
-	background-position: center;
-	position: relative;
-	height: 300px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 15px;
-}
-
-.about-mission-title {
-	font-size: 2rem;
-	font-weight: bold;
-	color: #fff;
-}
-
-.about-mission-text {
-	font-size: 1.2rem;
-	color: #f5f5f5;
-	margin-top: 10px;
-	max-width: 600px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.overlay {
-	background: rgba(0, 0, 0, 0.6);
-	padding: 20px;
-	border-radius: 10px;
-}
-
 .modern-button {
 	background-color: #5cb85c;
 	border: none;
 	color: #fff;
+	font-family: Palatino Linotype, serif;
 	padding: 0.75rem 1.5rem;
 	font-size: 1rem;
 	border-radius: 5px;

@@ -43,19 +43,18 @@ export default function About() {
 		<>
 			<HeroBanner
 				title="About Us"
-				subtitle="Our passion for creating beautiful outdoor spaces."
+				subtitle="We aim to blend nature's beauty with thoughtful design, offering our clients spaces that feel both functional and serene."
 				backgroundImage="/assets/eg-images/flower-chair-eg-og.jpg"
 				className="about-hero-banner"
 			/>
 			<Container fluid className="about-container">
-				<Row className="about-intro-section align-items-center px-3 rounded shadow">
+				<Row className="about-intro-section align-items-center px-3 py-3 rounded shadow">
 					<Col md={6} className="text-center py-4">
 						<Carousel
 							controls={false}
 							indicators={false}
 							className="about-carousel"
-							fade
-						>
+							fade>
 							<Carousel.Item>
 								<img
 									src="/assets/more-eg-photos/after-backyard.jpg"
@@ -72,7 +71,9 @@ export default function About() {
 							</Carousel.Item>
 						</Carousel>
 					</Col>
-					<Col md={6} className="d-flex flex-column justify-content-center">
+					<Col
+						md={6}
+						className="d-flex flex-column align-items-start justify-content-center">
 						<h2 className="about-heading d-flex justify-content-center">
 							Transforming Spaces for 14 Years
 						</h2>
@@ -96,22 +97,8 @@ export default function About() {
 					</Col>
 				</Row>
 
-				{/* Second Section - Our Mission */}
-				<Row className="about-mission-section py-5 text-center text-light">
-					<Col>
-						<div className="overlay">
-							<h3 className="about-mission-title">Our Mission</h3>
-							<p className="about-mission-text">
-								To create stunning outdoor spaces that inspire and delight. We
-								aim to blend nature's beauty with thoughtful design, offering
-								our clients spaces that feel both functional and serene.
-							</p>
-						</div>
-					</Col>
-				</Row>
-
 				{/* Third Section - Testimonials Carousel */}
-				<Row className="about-testimonials-section py-5">
+				<Row className="about-testimonials-section pt-5 pb-4">
 					<Col md={8} className="mx-auto">
 						<TestimonialCarousel testimonials={testimonials} />
 					</Col>

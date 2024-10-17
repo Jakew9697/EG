@@ -12,7 +12,7 @@ export default function HeroBanner({ title, subtitle, backgroundImage, className
         <Row className="justify-content-center text-center hero-banner-content">
           <Col xs={12} md={10} lg={8}>
             <h1 className="hero-banner-title d-flex justify-content-center">{title}</h1>
-            {subtitle && <p className="hero-banner-subtitle">{subtitle}</p>}
+             <p className="hero-banner-subtitle d-flex justify-content-center">{subtitle}</p>
           </Col>
         </Row>
       </Container>

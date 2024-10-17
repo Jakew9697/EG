@@ -5,13 +5,14 @@ import "./css/TestimonialCarousel.css";
 
 export default function TestimonialCarousel({ testimonials }) {
 	return (
-		<Card className="testimonial-card mx-auto shadow">
+		<Card className="testimonial-card mx-auto shadow rounded">
 			<Card.Body>
 				<Carousel
 					className="testimonial-carousel"
+					interval={7000}
 					indicators={false}
 					controls={false}
-					fade
+					slide={true}
 				>
 					{testimonials.map((testimonial, index) => (
 						<Carousel.Item key={index} className="testimonial-slide">

@@ -3,7 +3,8 @@
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    color: #ffffff;
+    color: #f7f0e4;
+    font-family: Palatino Linotype, serif;
     padding: 4rem 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     min-height: 90vh;
@@ -34,14 +35,17 @@
   }
   
   .hero-banner-title {
-    font-size: 3rem;
+    font-size: 5rem;
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.7);
     font-weight: bold;
     margin-bottom: 1rem;
     color: #f7f0e4;
+    text-wrap: nowrap;
   }
   
   .hero-banner-subtitle {
-    font-size: 1.5rem;
+    font-size: 3rem;
     color: #f7f0e4;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.7);
   }
   
