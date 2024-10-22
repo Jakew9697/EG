@@ -146,12 +146,12 @@ export default function Quote({ show, handleClose }) {
 			</Offcanvas.Header>
 			<Offcanvas.Body>
 				{submitSuccess && (
-					<Alert variant="success">
+					<Alert dismissible variant="success">
 						Your request has been submitted successfully!
 					</Alert>
 				)}
 				{submitError && (
-					<Alert variant="danger">
+					<Alert dismissible variant="danger">
 						There was an error submitting your request. Please try again.
 					</Alert>
 				)}
