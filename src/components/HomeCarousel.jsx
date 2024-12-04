@@ -20,6 +20,34 @@ const HomeCarousel = () => {
           </div>
         </Carousel.Caption>
       </Carousel.Item>
+      <Carousel.Item className="home-carousel-item">
+        <img
+          className="home-carousel-image d-block w-100"
+          src="/assets/eg-images/yard-bench-eg-og.jpg"
+          alt="Second slide"
+        />
+        <Carousel.Caption className="home-carousel-caption carousel-caption-centered">
+          <h1><b>Premium Landscape Design & Transformation</b></h1>
+          <p><i><b>Bringing your home's exterior to life.</b></i></p>
+          <div className="home-button-wrapper d-flex justify-content-center">
+            <Button variant="primary" size="lg" className="home-carousel-buttons">Learn More</Button>
+          </div>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item className="home-carousel-item">
+        <img
+          className="home-carousel-image d-block w-100"
+          src="/assets/eg-images/pool-garden.jpg"
+          alt="Third slide"
+        />
+        <Carousel.Caption className="home-carousel-caption carousel-caption-centered">
+          <h1><b>Premium Landscape Design & Transformation</b></h1>
+          <p><i><b>Bringing your home's exterior to life.</b></i></p>
+          <div className="home-button-wrapper d-flex justify-content-center">
+            <Button variant="primary" size="lg" className="home-carousel-buttons">Learn More</Button>
+          </div>
+        </Carousel.Caption>
+      </Carousel.Item>
     </Carousel>
     </Row>
   );

@@ -136,7 +136,7 @@
 	}
 
 	.before-after-paragraph {
-		font-size: 1.25rem;
+		font-size: 1;
 		margin-left: 10%;
 		margin-right: 10%;
 	}
@@ -148,7 +148,7 @@
 	.before-image-wrapper-mobile,
 	.after-image-wrapper-mobile {
 		width: 100%;
-		margin-bottom: 20px;
+		margin-bottom: 1rem;
 	}
 
 	.before-image-wrapper-mobile img,
@@ -171,7 +171,7 @@
 	}
 
 	.before-after-header {
-		font-size: 1.5rem;
+		font-size: 1.75rem;
 	}
 
 	.before-after-paragraph-column.mb-5 {
@@ -179,7 +179,7 @@
 	}
 
 	.before-after-paragraph {
-		font-size: 1rem;
+		font-size: .9rem;
 		margin-left: 0;
 		margin-right: 0;
 	}

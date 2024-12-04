@@ -35,7 +35,7 @@
   }
   
   .hero-banner-title {
-    font-size: 5rem;
+    font-size: 3rem;
     text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.7);
     font-weight: bold;
     margin-bottom: 1rem;
@@ -44,8 +44,28 @@
   }
   
   .hero-banner-subtitle {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #f7f0e4;
     text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.7);
   }
   
+
+  @media (max-width: 768px) {
+    .hero-banner-title {
+      font-size: 2.5rem;
+    }
+  
+    .hero-banner-subtitle {
+      font-size: 1.75rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .hero-banner-title {
+      font-size: 2rem;
+    }
+  
+    .hero-banner-subtitle {
+      font-size: 1.5rem;
+    }
+  }

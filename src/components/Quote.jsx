@@ -17,12 +17,15 @@ export default function Quote({ show, handleClose }) {
 		phoneNumber: "",
 		message: "",
 		services: [],
+		company: "", // honeypot hidden field for added security. if this field is filled out the form will be rejected.
 	});
 
 	const [errors, setErrors] = useState({});
 	const [submitSuccess, setSubmitSuccess] = useState(false);
 	const [submitError, setSubmitError] = useState(false);
 	const [captchaValue, setCaptchaValue] = useState(null);
+	const [characterLimit, setCharacterLimit] = useState(0);
+	const MAX_CHARACTER_LIMIT = 200;
 
 	const serviceOptions = [
 		{ value: "gardening", label: "Gardening" },
@@ -36,9 +39,17 @@ export default function Quote({ show, handleClose }) {
 
 	const animatedComponents = makeAnimated();
 
+	const G_KEY = process.env.REACT_APP_GSITE_KEY;
+	const SRV_ID = process.env.REACT_APP_SRV_ID;
+	const TMP_ID = process.env.REACT_APP_TMP_ID;
+	const E_KEY = process.env.REACT_APP_EKEY;
+
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 		setFormData({ ...formData, [name]: value });
+		if (name === "message") {
+			setCharacterLimit(value.length);
+		}
 		if (errors[name]) {
 			const newErrors = { ...errors };
 			delete newErrors[name];
@@ -71,6 +82,7 @@ export default function Quote({ show, handleClose }) {
 		if (formData.services.length === 0)
 			newErrors.services = "Selecting one or more options is required";
 		if (!captchaValue) newErrors.captcha = "Please verify that you are human";
+		if (formData.company.trim()) newErrors.company = "Try again...";
 
 		return newErrors;
 	};
@@ -78,10 +90,10 @@ export default function Quote({ show, handleClose }) {
 	const sendEmail = (templateParams) => {
 		emailjs
 			.send(
-				"service_t6ks8jg",
-				"template_6efhwhu",
+				SRV_ID, //serviceid
+				TMP_ID, //templateid
 				templateParams,
-				"cg3KqKZdpd-E3Ohpj"
+				E_KEY // public key
 			)
 			.then((response) => {
 				console.log("Email successfully sent!", response.status, response.text);
@@ -121,7 +133,9 @@ export default function Quote({ show, handleClose }) {
 				phoneNumber: "",
 				message: "",
 				services: [],
+				company: "",
 			});
+			setCharacterLimit(0);
 			setErrors({});
 		} else {
 			setErrors(formErrors);
@@ -156,6 +170,15 @@ export default function Quote({ show, handleClose }) {
 					</Alert>
 				)}
 				<Form onSubmit={handleSubmit} noValidate className="quote-form">
+					<Form.Control
+						type="text"
+						name="company"
+						placeholder="Company"
+						className="d-none"
+						value={formData.company}
+						onChange={handleChange}
+						style={{ display: "none" }} //invisible to the user. if this field gets filled out its a bot.
+					/>
 					<Row>
 						<Col>
 							<Form.Group controlId="formFirstName" className="mb-3">
@@ -203,7 +226,7 @@ export default function Quote({ show, handleClose }) {
 									value={formData.services}
 									onChange={handleSelectChange}
 									placeholder="Select one or more services..."
-                  isInvalid={!!errors.services}
+									isInvalid={!!errors.services}
 									className={`react-select-container ${
 										errors.services ? "is-invalid" : ""
 									}`}
@@ -226,7 +249,7 @@ export default function Quote({ show, handleClose }) {
 									className="modern-input"
 									value={formData.address}
 									onChange={handleChange}
-                  isInvalid={!!errors.address}
+									isInvalid={!!errors.address}
 								/>
 							</Form.Group>
 						</Col>
@@ -240,7 +263,7 @@ export default function Quote({ show, handleClose }) {
 									className="modern-input"
 									value={formData.zipCode}
 									onChange={handleChange}
-                  isInvalid={!!errors.zipCode}
+									isInvalid={!!errors.zipCode}
 								/>
 							</Form.Group>
 						</Col>
@@ -289,7 +312,8 @@ export default function Quote({ show, handleClose }) {
 									as="textarea"
 									rows={3}
 									name="message"
-									placeholder="Write your message here..."
+									placeholder="Tell us about your project..."
+									maxLength={200}
 									className="modern-input"
 									value={formData.message}
 									onChange={handleChange}
@@ -298,13 +322,20 @@ export default function Quote({ show, handleClose }) {
 								<Form.Control.Feedback type="invalid">
 									{errors.message}
 								</Form.Control.Feedback>
+								<div className="d-flex justify-content-end">
+									<small>
+										<i>
+											{characterLimit}/{MAX_CHARACTER_LIMIT}
+										</i>
+									</small>
+								</div>
 							</Form.Group>
 						</Col>
 					</Row>
-          <Row className="d-flex justify-content-center mb-4">
+					<Row className="d-flex justify-content-center mb-4">
 						<Col className="d-flex justify-content-center">
 							<ReCAPTCHA
-								sitekey="6Lc2P2gqAAAAAAFGKWmehuwSWWIZSvSXFHxunb5I"
+								sitekey={G_KEY} // site key
 								onChange={onCaptchaChange}
 							/>
 							{errors.captcha && (
